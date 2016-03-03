@@ -1,0 +1,28 @@
+<div ng-controller="DirectorioClientesCtrl" class="md-padding" id="popupContainer" ng-cloak>
+    <table class="table table-striped table-hover">
+        <tbody>
+        <th>
+            <h2>Identifiacion</h2>
+        </th>
+        <th>
+            <h2>Nombre</h2>
+        </th>
+        <th>
+            <h2>Fotografia</h2>
+        </th>
+        <th>
+            <h2>Detalles</h2>            
+        </th>
+        <tr ng-repeat="client in listadoClientes">
+            <td>{{client.id}}</td>
+            <td>{{client.name}}</td>
+            <td><image src="/clients/{{client.id}}/picture" alt="" width="80" height="100"/></td>           
+            
+            <td><md-button class="md-primary md-raised" ng-click="showAlert($event, client)"   flex="100"  flex-gt-md="auto">
+                Detalles
+            </md-button><td>
+                  
+        </tr>
+        </tbody>
+    </table>        
+    </div>
